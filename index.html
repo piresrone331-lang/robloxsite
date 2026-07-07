@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox News &amp; Curiosidades 🎮 | Trabalho Escolar 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Poppins:wght@600&amp;display=swap');
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Poppins', system_ui, sans-serif;
+            font-weight: 600;
+        }
+
+        .section-header {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, #E2231A, #FF6B6B);
+            border-radius: 2px;
+        }
+
+        .news-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .news-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .curiosity-item {
+            transition: all 0.3s ease;
+        }
+
+        .nav-link {
+            transition: all 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #E2231A;
+            transform: translateY(-1px);
+        }
+
+        .roblox-gradient {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        .avatar-container {
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                        box-shadow 0.3s ease;
+        }
+        
+        .avatar-container:hover {
+            transform: scale(1.03) rotate(1deg);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+        }
+
+        .roblox-red {
+            color: #E2231A;
+        }
+
+        .award-badge {
+            background: linear-gradient(135deg, #E2231A, #FF6B6B);
+            color: white;
+            box-shadow: 0 4px 6px -1px rgb(226 35 26 / 0.3);
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200">
+    <!-- NAVEGAÇÃO -->
+    <nav class="bg-zinc-900 border-b border-zinc-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3 cursor-pointer" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+                    <div class="w-11 h-11 bg-[#E2231A] rounded-2xl flex items-center justify-center shadow-lg shadow-red-950/50">
+                        <i class="fa-solid fa-gamepad text-white text-3xl"></i>
+                    </div>
+                    <div>
+                        <span class="heading-font text-3xl font-bold tracking-tighter">Roblox</span>
+                        <span class="heading-font text-3xl font-bold tracking-tighter text-[#E2231A]">News</span>
+                    </div>
+                </div>
+
+                <!-- Menu -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#noticias" class="nav-link text-zinc-300 hover:text-white">Notícias</a>
+                    <a href="#curiosidades" class="nav-link text-zinc-300 hover:text-white">Curiosidades</a>
+                    <a href="#premiacoes" class="nav-link text-zinc-300 hover:text-white">Premiações</a>
+                    <a href="#avatar" class="nav-link text-zinc-300 hover:text-white">Meu Avatar</a>
+                </div>
+
+                <div class="flex items-center gap-x-4">
+                    <div class="hidden sm:flex items-center bg-zinc-900 border border-zinc-800 rounded-3xl px-4 py-1.5 text-xs">
+                        <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse mr-2"></div>
+                        <span class="text-emerald-400 font-medium">Atualizado em 2026</span>
+                    </div>
+                    
+                    <!-- Mobile menu -->
+                    <button onclick="toggleMobileMenu()" class="md:hidden w-10 h-10 flex items-center justify-center text-zinc-400 hover:text-white">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO / BANNER com Avatar -->
+    <header class="roblox-gradient border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 pt-12 pb-16">
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                
+                <!-- Texto -->
+                <div class="md:col-span-7 text-center md:text-left">
+                    <div class="inline-flex items-center gap-x-2 bg-zinc-900 border border-zinc-800 rounded-3xl px-5 py-2 mb-6">
+                        <span class="text-xs font-semibold tracking-[2px] text-[#E2231A]">TRABALHO ESCOLAR • 2026</span>
+                    </div>
+                    
+                    <h1 class="heading-font text-5xl md:text-7xl font-bold tracking-tighter leading-none mb-4">
+                        Roblox News<br>&amp; Curiosidades
+                    </h1>
+                    <p class="max-w-lg mx-auto md:mx-0 text-xl text-zinc-400 mb-8">
+                        Fique por dentro das novidades, mistérios e segredos do universo Roblox!
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+                        <a href="#noticias" 
+                           class="inline-flex items-center justify-center gap-x-2 bg-[#E2231A] hover:bg-red-700 transition-colors text-white font-semibold px-8 h-14 rounded-3xl text-base shadow-lg shadow-red-950/40 w-full sm:w-auto">
+                            <span>Explorar Notícias</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#avatar" 
+                           class="inline-flex items-center justify-center gap-x-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 transition-colors font-semibold px-8 h-14 rounded-3xl text-base w-full sm:w-auto">
+                            Ver meu Avatar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Avatar em destaque -->
+                <div class="md:col-span-5 flex justify-center md:justify-end">
+                    <div class="relative">
+                        <div class="avatar-container bg-white p-4 rounded-3xl shadow-2xl shadow-black/60 border border-zinc-700">
+                            <img src="https://i.pinimg.com/736x/9d/8f/f0/9d8ff063098f01cc3d14d8842d01bd0d.jpg" 
+                                 alt="Avatar Roblox do criador - Rone Martins Pires" 
+                                 class="w-[220px] h-auto md:w-[260px] rounded-2xl object-contain"
+                                 style="image-rendering: crisp-edges;">
+                        </div>
+                        <!-- Badge flutuante -->
+                        <div class="absolute -bottom-3 -right-3 bg-zinc-900 border border-zinc-700 text-white text-xs font-bold px-4 py-2 rounded-2xl flex items-center gap-x-2 shadow-lg">
+                            <i class="fa-solid fa-user text-[#E2231A]"></i>
+                            <span>Avatar Oficial</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NOTÍCIAS -->
+    <section id="noticias" class="max-w-7xl mx-auto px-6 pt-16 pb-12">
+        <div class="flex items-end justify-between mb-8">
+            <div>
+                <span class="text-[#E2231A] text-sm font-bold tracking-widest">📰 ATUALIZADO EM JUNHO 2026</span>
+                <h2 class="heading-font text-4xl font-bold tracking-tight">Últimas Notícias</h2>
+            </div>
+            <a href="#" class="hidden md:flex items-center text-sm font-medium text-zinc-400 hover:text-white group">
+                Ver todas as notícias 
+                <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition"></i>
+            </a>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- Notícia 1 -->
+            <div class="news-card bg-zinc-900 border border-zinc-800 rounded-3xl p-7">
+                <div class="flex items-center gap-x-3 mb-4">
+                    <div class="px-3.5 py-1 bg-emerald-900/60 text-emerald-400 text-xs font-bold rounded-2xl flex items-center gap-x-1.5">
+                        <i class="fa-solid fa-calendar-day"></i>
+                        <span>Junho 2026</span>
+                    </div>
+                    <span class="text-xs px-3 py-1 bg-zinc-800 rounded-2xl text-zinc-400">EVENTO</span>
+                </div>
+                
+                <h3 class="text-2xl font-semibold leading-tight tracking-tight mb-3">Novo evento massivo chega ao Roblox este mês</h3>
+                <p class="text-zinc-400 leading-relaxed mb-5">
+                    O Roblox anunciou um novo mapa temático com itens grátis para todos os jogadores que completarem as missões diárias. Prepare o seu avatar!
+                </p>
+                
+                <div class="flex items-center justify-between text-sm">
+                    <div class="flex items-center gap-x-2">
+                        <div class="w-8 h-8 bg-zinc-700 rounded-2xl overflow-hidden">
+                            <i class="fa-solid fa-robot w-full h-full flex items-center justify-center text-zinc-400"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-sm">Equipe Roblox</p>
+                            <p class="text-xs text-zinc-500">Oficial</p>
+                        </div>
+                    </div>
+                    <span class="text-emerald-400 text-xs font-medium flex items-center gap-x-1">
+                        <i class="fa-solid fa-check-double"></i> 
+                        <span>Confirmado</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Notícia 2 -->
+            <div class="news-card bg-zinc-900 border border-zinc-800 rounded-3xl p-7">
+                <div class="flex items-center gap-x-3 mb-4">
+                    <div class="px-3.5 py-1 bg-sky-900/60 text-sky-400 text-xs font-bold rounded-2xl flex items-center gap-x-1.5">
+                        <i class="fa-solid fa-calendar-day"></i>
+                        <span>Junho 2026</span>
+                    </div>
+                    <span class="text-xs px-3 py-1 bg-zinc-800 rounded-2xl text-zinc-400">ATUALIZAÇÃO</span>
+                </div>
+                
+                <h3 class="text-2xl font-semibold leading-tight tracking-tight mb-3">Update de Gráficos: Realismo no motor do jogo</h3>
+                <p class="text-zinc-400 leading-relaxed mb-5">
+                    A nova atualização promete melhorar a iluminação das sombras e o reflexo da água dentro dos mapas criados pelos desenvolvedores.
+                </p>
+                
+                <div class="flex items-center justify-between text-sm">
+                    <div class="flex items-center gap-x-2">
+                        <div class="w-8 h-8 bg-zinc-700 rounded-2xl overflow-hidden">
+                            <i class="fa-solid fa-robot w-full h-full flex items-center justify-center text-zinc-400"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-sm">Roblox Engine Team</p>
+                            <p class="text-xs text-zinc-500">Atualização Técnica</p>
+                        </div>
+                    </div>
+                    <span class="text-sky-400 text-xs font-medium flex items-center gap-x-1">
+                        <i class="fa-solid fa-sync"></i> 
+                        <span>Em breve</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURIOSIDADES -->
+    <section id="curiosidades" class="bg-zinc-900 border-y border-zinc-800 py-16">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="mb-10">
+                <span class="text-[#E2231A] text-sm font-bold tracking-widest">💡 VOCÊ SABIA?</span>
+                <h2 class="heading-font text-4xl font-bold tracking-tight">Curiosidades que você (provavelmente) não sabia</h2>
+            </div>
+
+            <!-- Intro -->
+            <div class="prose prose-invert max-w-none mb-10 text-lg text-zinc-300">
+                <p>O Roblox é uma das plataformas de jogos mais populares do mundo, com milhões de jogadores, especialmente crianças e adolescentes. Como qualquer grande site da internet, ele já enfrentou desafios de segurança ao longo dos anos. Muitos “hacks” famosos que circulam na internet são, na verdade, mitos da comunidade, exploits antigos ou golpes contra os próprios jogadores. Mas alguns incidentes reais aconteceram e servem como lição importante sobre segurança online.</p>
+            </div>
+
+            <!-- Incidente 1 -->
+            <div class="curiosity-item bg-zinc-950 border border-zinc-800 rounded-3xl p-8 mb-6">
+                <div class="flex items-start gap-x-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-red-950 text-[#E2231A] rounded-2xl flex items-center justify-center text-3xl">
+                        <i class="fa-solid fa-user-secret"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-x-3 mb-2">
+                            <span class="font-mono text-xs bg-zinc-800 px-3 py-px rounded font-bold">01/04/2012</span>
+                            <span class="text-red-400 text-sm font-bold">DIA DA MENTIRA</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold tracking-tight mb-4">O Incidente de 1º de Abril de 2012 – O “Hack” Mais Famoso da Comunidade</h3>
+                        
+                        <div class="space-y-4 text-zinc-300">
+                            <p>No dia 1º de abril de 2012 (Dia da Mentira), um usuário chamado <strong>olixx</strong> conseguiu acesso ao painel de administração do Roblox. O acesso veio de credenciais de um ex-moderador do fórum antigo.</p>
+                            
+                            <div>
+                                <p class="font-medium text-white mb-2">O que aconteceu?</p>
+                                <ul class="list-disc pl-5 space-y-1.5 text-sm">
+                                    <li>Foram colocados banners estranhos e engraçados no topo do site (um deles dizia <em>“always share your passwords with strangers, kids!”</em> — “sempre compartilhe sua senha com estranhos, crianças!”).</li>
+                                    <li>Itens novos e estranhos apareceram no catálogo.</li>
+                                    <li>Houve distribuição incorreta de Robux e itens para algumas contas.</li>
+                                    <li>O site ficou instável por algumas horas.</li>
+                                </ul>
+                            </div>
+                            
+                            <p>O incidente foi resolvido ainda no mesmo dia. Os administradores recuperaram o controle, reverteram as mudanças e baniram as contas envolvidas. Foi considerado na época um dos maiores “hacks” da história do Roblox pela comunidade, principalmente por causa do caos visual e da ironia da data.</p>
+                            
+                            <div class="bg-zinc-900 border-l-4 border-[#E2231A] pl-5 py-1 text-sm italic">
+                                Curiosidade: Muitos jogadores da época ainda lembram dos banners malucos que apareciam na tela!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Incidente 2 -->
+            <div class="curiosity-item bg-zinc-950 border border-zinc-800 rounded-3xl p-8">
+                <div class="flex items-start gap-x-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-amber-950 text-amber-400 rounded-2xl flex items-center justify-center text-3xl">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-x-3 mb-2">
+                            <span class="font-mono text-xs bg-zinc-800 px-3 py-px rounded font-bold">JULHO 2016</span>
+                            <span class="text-amber-400 text-sm font-bold">VAZAMENTO DE DADOS</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold tracking-tight mb-4">Vazamento de Dados de 2016</h3>
+                        
+                        <div class="space-y-4 text-zinc-300">
+                            <p>Em julho de 2016, invasores conseguiram acessar um painel de administração em um site de teste do Roblox. Esse ambiente de teste continha uma cópia antiga do banco de dados de produção de 2012.</p>
+                            
+                            <div>
+                                <p class="font-medium text-white mb-2">Dados expostos:</p>
+                                <div class="grid grid-cols-2 gap-2 text-sm">
+                                    <div class="flex items-center gap-x-2 bg-zinc-900 px-4 py-2.5 rounded-2xl">
+                                        <i class="fa-solid fa-user text-amber-400 w-4"></i>
+                                        <span>Nomes de usuário</span>
+                                    </div>
+                                    <div class="flex items-center gap-x-2 bg-zinc-900 px-4 py-2.5 rounded-2xl">
+                                        <i class="fa-solid fa-envelope text-amber-400 w-4"></i>
+                                        <span>Endereços de e-mail antigos</span>
+                                    </div>
+                                    <div class="flex items-center gap-x-2 bg-zinc-900 px-4 py-2.5 rounded-2xl">
+                                        <i class="fa-solid fa-globe text-amber-400 w-4"></i>
+                                        <span>Endereços IP</span>
+                                    </div>
+                                    <div class="flex items-center gap-x-2 bg-zinc-900 px-4 py-2.5 rounded-2xl">
+                                        <i class="fa-solid fa-coins text-amber-400 w-4"></i>
+                                        <span>Saldos de Robux e histórico de compras</span>
+                                    </div>
+                                </div>
+                                <p class="text-xs mt-1 text-zinc-500">(sem números completos de cartão de crédito)</p>
+                            </div>
+                            
+                            <p>Cerca de <strong>50 mil a 100 mil contas</strong> tiveram dados expostos. Parte dessas informações vazou publicamente na internet. O Roblox demorou algumas semanas para avisar os usuários e pediu que muitos resetassem a senha.</p>
+                            
+                            <div class="bg-emerald-950/40 border border-emerald-900 rounded-2xl p-5 text-sm">
+                                <p class="font-semibold text-emerald-400 mb-1 flex items-center gap-x-2">
+                                    <i class="fa-solid fa-lightbulb"></i> 
+                                    <span>LIÇÃO IMPORTANTE</span>
+                                </p>
+                                <p class="text-emerald-300">Mesmo empresas grandes podem ter falhas em ambientes de teste. Por isso, <strong>nunca reutilize a mesma senha em vários sites</strong>. Use gerenciadores de senhas e ative a autenticação de dois fatores (2FA) sempre que possível.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <p class="text-xs text-zinc-500 max-w-md mx-auto">Estes casos são documentados publicamente e servem como alerta para a importância da segurança digital. O Roblox melhorou significativamente seus protocolos de segurança desde então.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIAÇÕES -->
+    <section id="premiacoes" class="max-w-7xl mx-auto px-6 pt-16 pb-20">
+        <div class="mb-10">
+            <span class="text-[#E2231A] text-sm font-bold tracking-widest">🏆 RECONHECIMENTO</span>
+            <h2 class="heading-font text-4xl font-bold tracking-tight">Premiações que o Roblox já ganhou</h2>
+        </div>
+
+        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 md:p-10 mb-8">
+            <div class="prose prose-invert max-w-none">
+                <p class="text-xl text-zinc-300">Sim, o Roblox já ganhou várias premiações importantes, tanto na indústria de games quanto em eventos organizados pela própria plataforma para seus desenvolvedores e criadores.</p>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Card 1: Innovation Awards -->
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-7 flex flex-col">
+                <div class="award-badge inline-flex self-start px-4 py-1 rounded-2xl text-xs font-bold mb-5">INOVAÇÃO</div>
+                <h4 class="font-semibold text-2xl tracking-tight mb-3">Roblox Innovation Awards</h4>
+                <p class="text-zinc-400 text-sm flex-1">Evento anual realizado durante a Roblox Developers Conference (RDC). Premia as melhores experiências, estúdios, criadores UGC, plugins e uso de tecnologia.</p>
+                
+                <div class="mt-6 pt-6 border-t border-zinc-800 text-xs">
+                    <p class="font-medium text-white mb-3">Destaques de 2025:</p>
+                    <ul class="space-y-2 text-sm text-zinc-300">
+                        <li class="flex gap-x-2"><span class="text-[#E2231A]">•</span> <strong>Best New Experience:</strong> Grow a Garden</li>
+                        <li class="flex gap-x-2"><span class="text-[#E2231A]">•</span> <strong>Best Studio:</strong> Splitting Point</li>
+                        <li class="flex gap-x-2"><span class="text-[#E2231A]">•</span> <strong>Best Use of Tech:</strong> Dead Rails</li>
+                        <li class="flex gap-x-2"><span class="text-[#E2231A]">•</span> <strong>Best UGC Creator:</strong> Yourius</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 2: Bloxy Awards -->
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-7 flex flex-col">
+                <div class="award-badge inline-flex self-start px-4 py-1 rounded-2xl text-xs font-bold mb-5">HISTÓRICO</div>
+                <h4 class="font-semibold text-2xl tracking-tight mb-3">Bloxy Awards</h4>
+                <p class="text-zinc-400 text-sm flex-1">Os antigos Bloxy Awards foram a principal premiação da comunidade Roblox por muitos anos, celebrando os melhores jogos, criadores e contribuições para a plataforma.</p>
+                
+                <div class="mt-auto pt-6">
+                    <div class="text-xs bg-zinc-950 border border-zinc-700 rounded-2xl p-4">
+                        <p class="font-medium">Edições realizadas de 2013 até 2020 aproximadamente, com categorias como:</p>
+                        <p class="mt-2 text-zinc-400">Melhor Jogo • Melhor Criador • Experiência Mais Popular • etc.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Developer Awards -->
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-7 flex flex-col">
+                <div class="award-badge inline-flex self-start px-4 py-1 rounded-2xl text-xs font-bold mb-5">DESENVOLVEDORES</div>
+                <h4 class="font-semibold text-2xl tracking-tight mb-3">Developer Awards &amp; Crowns</h4>
+                <p class="text-zinc-400 text-sm flex-1">Programa de recompensas baseado em dados que reconhece desenvolvedores que atingem marcos importantes de jogadores ativos mensais (MAU).</p>
+                
+                <div class="mt-6">
+                    <div class="flex flex-wrap gap-2">
+                        <div class="text-[10px] bg-zinc-800 px-3 py-1 rounded-2xl">Crown of O's</div>
+                        <div class="text-[10px] bg-zinc-800 px-3 py-1 rounded-2xl">Bombastic Crown</div>
+                        <div class="text-[10px] bg-zinc-800 px-3 py-1 rounded-2xl">Gold Crown</div>
+                    </div>
+                    <p class="text-xs text-zinc-500 mt-4">Os criadores recebem itens exclusivos como coroas e outros prêmios virtuais.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center text-xs text-zinc-500">
+            Fontes: Roblox Developers Forum, Roblox Wiki, publicações especializadas como Variety e Pocket Gamer (2024–2025)
+        </div>
+    </section>
+
+    <!-- SEÇÃO DO AVATAR (nova e em destaque) -->
+    <section id="avatar" class="bg-zinc-900 border-y border-zinc-800 py-16">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <span class="text-[#E2231A] text-sm font-bold tracking-widest">👤 CRIADOR DO PROJETO</span>
+                <h2 class="heading-font text-4xl font-bold tracking-tight mt-2">Meu Avatar no Roblox</h2>
+                <p class="text-zinc-400 mt-3 max-w-md mx-auto">Este é o avatar que usei para representar este trabalho escolar sobre o universo Roblox!</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center justify-center gap-10">
+                <!-- Imagem maior do avatar -->
+                <div class="relative">
+                    <div class="bg-white p-6 rounded-3xl shadow-2xl shadow-black/70 border border-zinc-700">
+                        <img src="https://i.pinimg.com/736x/9d/8f/f0/9d8ff063098f01cc3d14d8842d01bd0d.jpg" 
+                             alt="Avatar Roblox completo - Camuflado com Supreme e goggles" 
+                             class="w-[280px] md:w-[320px] h-auto rounded-2xl object-contain"
+                             style="image-rendering: crisp-edges;">
+                    </div>
+                    <div class="absolute -top-4 -left-4 bg-[#E2231A] text-white text-xs font-bold px-5 py-2 rounded-2xl shadow-lg flex items-center gap-x-2">
+                        <i class="fa-solid fa-check"></i>
+                        <span>100% Roblox Style</span>
+                    </div>
+                </div>
+
+                <!-- Informações do avatar -->
+                <div class="max-w-md text-center md:text-left">
+                    <h3 class="text-2xl font-semibold mb-4">Detalhes do Avatar</h3>
+                    
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-start gap-x-4 bg-zinc-950 border border-zinc-800 rounded-2xl p-4">
+                            <i class="fa-solid fa-tshirt text-[#E2231A] mt-1 w-5"></i>
+                            <div>
+                                <p class="font-medium">Camiseta Supreme</p>
+                                <p class="text-zinc-400 text-xs">Avatar mais cara do jogo</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-x-4 bg-zinc-950 border border-zinc-800 rounded-2xl p-4">
+                            <i class="fa-solid fa-user-secret text-[#E2231A] mt-1 w-5"></i>
+                            <div>
+                                <p class="font-medium">Jaqueta Camuflada + Goggles</p>
+                                <p class="text-zinc-400 text-xs">Shape de cria</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-x-4 bg-zinc-950 border border-zinc-800 rounded-2xl p-4">
+                            <i class="fa-solid fa-smile text-[#E2231A] mt-1 w-5"></i>
+                            <div>
+                                <p class="font-medium">Rosto Sorridente</p>
+                                <p class="text-zinc-400 text-xs">expressao horroso e amigavel</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 text-xs bg-zinc-950 border border-zinc-700 rounded-2xl p-4">
+                        <p class="text-zinc-400">Avatar criado especialmente para este projeto escolar sobre Roblox. 
+                        Representa o criador explorando o mundo de notícias e curiosidades da plataforma!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE O PROJETO -->
+    <section id="sobre" class="max-w-3xl mx-auto px-6 py-16 text-center">
+        <div class="inline-flex items-center justify-center w-16 h-16 bg-zinc-900 border border-zinc-700 rounded-3xl mb-6">
+            <i class="fa-solid fa-graduation-cap text-3xl text-zinc-400"></i>
+        </div>
+        
+        <h3 class="heading-font text-2xl font-semibold mb-3">Sobre este projeto</h3>
+        <p class="text-zinc-400 max-w-md mx-auto">Este site foi criado como trabalho escolar para apresentar notícias, curiosidades e conquistas do Roblox de forma educativa e atrativa.</p>
+        
+        <div class="mt-8 pt-8 border-t border-zinc-800 text-sm">
+            <p class="font-medium">Criado por <span class="text-white">Rone Martins Pires</span></p>
+            <p class="text-zinc-500">Trabalho da escola • 2026</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-6 border-t border-zinc-900">
+        <div class="max-w-7xl mx-auto px-6 text-center text-xs text-zinc-500">
+            <p>Este é um projeto escolar fictício/educacional. Algumas notícias são ilustrativas. 
+            Para informações oficiais, consulte o site do Roblox e fontes confiáveis.</p>
+            <p class="mt-1">© 2026 • Feito com ❤️ para fins educacionais • Avatar do criador incluído</p>
+        </div>
+    </footer>
+
+    <script>
+        function initializeTailwind() {
+            // Tailwind já está carregado via CDN
+        }
+        
+        function toggleMobileMenu() {
+            const mobileMenu = document.createElement('div');
+            mobileMenu.className = 'md:hidden fixed inset-0 bg-black/95 z-[100] flex flex-col p-6';
+            mobileMenu.innerHTML = `
+                <div class="flex justify-between items-center mb-8">
+                    <div class="flex items-center gap-x-3">
+                        <div class="w-9 h-9 bg-[#E2231A] rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-gamepad text-white"></i>
+                        </div>
+                        <span class="heading-font text-2xl font-bold">Roblox News</span>
+                    </div>
+                    <button onclick="this.parentElement.remove()" class="text-4xl text-zinc-400 hover:text-white leading-none">×</button>
+                </div>
+                <div class="flex flex-col gap-y-1 text-lg">
+                    <a href="#noticias" onclick="this.parentElement.remove()" class="py-4 px-2 border-b border-zinc-800 hover:text-[#E2231A]">Notícias</a>
+                    <a href="#curiosidades" onclick="this.parentElement.remove()" class="py-4 px-2 border-b border-zinc-800 hover:text-[#E2231A]">Curiosidades</a>
+                    <a href="#premiacoes" onclick="this.parentElement.remove()" class="py-4 px-2 border-b border-zinc-800 hover:text-[#E2231A]">Premiações</a>
+                    <a href="#avatar" onclick="this.parentElement.remove()" class="py-4 px-2 hover:text-[#E2231A]">Meu Avatar</a>
+                </div>
+                <div class="mt-auto pt-8 text-center text-xs text-zinc-500">
+                    Criado por Rone Martins Pires • 2026
+                </div>
+            `;
+            document.body.appendChild(mobileMenu);
+        }
+
+        function setupSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        const navHeight = 80;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.scrollY - navHeight;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        function init() {
+            initializeTailwind();
+            setupSmoothScroll();
+            
+            // Easter egg: clique no avatar no hero abre a seção do avatar
+            const avatarHero = document.querySelector('.avatar-container');
+            if (avatarHero) {
+                avatarHero.style.cursor = 'pointer';
+                avatarHero.addEventListener('click', () => {
+                    document.getElementById('avatar').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+            }
+            
+            console.log('%c[Roblox News] Site adaptado com o avatar do criador carregado com sucesso!', 'color:#666');
+        }
+        
+        window.onload = init;
+    </script>
+</body>
+</html>

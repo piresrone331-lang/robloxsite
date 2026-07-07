@@ -1,0 +1,75 @@
+/* ============================================
+   ROBLOX NEWS & CURIOSIDADES - CSS
+   Criado por Rone Martins Pires - Trabalho Escolar 2026
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600&display=swap');
+
+body {
+    font-family: 'Inter', system_ui, sans-serif;
+}
+
+.heading-font {
+    font-family: 'Poppins', system_ui, sans-serif;
+    font-weight: 600;
+}
+
+/* Efeito nos cards de notícia */
+.news-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 
+                0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* Cards de curiosidades */
+.curiosity-item {
+    transition: all 0.3s ease;
+}
+
+/* Links do menu */
+.nav-link {
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #E2231A;
+    transform: translateY(-1px);
+}
+
+/* Gradiente do hero */
+.roblox-gradient {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+/* Avatar decorativo pequeno */
+.small-avatar {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.small-avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+}
+
+/* Badge de premiações */
+.award-badge {
+    background: linear-gradient(135deg, #E2231A, #FF6B6B);
+    color: white;
+    box-shadow: 0 4px 6px -1px rgb(226 35 26 / 0.3);
+}
+
+/* Estilo extra para o hero e seções */
+h1, h2, h3 {
+    font-family: 'Poppins', system_ui, sans-serif;
+}
+
+/* Ajustes responsivos extras */
+@media (max-width: 768px) {
+    .news-card {
+        padding: 1.5rem;
+    }
+}
